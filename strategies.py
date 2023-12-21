@@ -12,6 +12,8 @@ from engine_wrapper import MinimalEngine, MOVE
 from typing import Any
 import logging
 
+from homemade import bots
+
 
 # Use this logger variable to print messages to the console or log files.
 # logger.info("message") will always print "message" to the console or log file.
@@ -93,3 +95,6 @@ class ComboEngine(ExampleEngine):
             possible_moves.sort(key=str)
             move = possible_moves[0]
         return PlayResult(move, None, draw_offered=draw_offered)
+
+class SimpleStrategy(bots.SimpleStrategy):
+    pass
